@@ -1,12 +1,18 @@
-"use client"
-import Image from "next/image";
-import { Box, Button, Input, Label } from "theme-ui";
+"use client";
+import { Box, Button, Flex, Heading } from "theme-ui";
+import { Toggle } from "@/components/Toggle";
 export default function Home() {
   return (
-    <Box sx={{ display: "flex", alignItems: "center", mb: 4 }}>
-      <Label htmlFor="search">Search</Label>
-      <Input id="search" name="search"  />
-      <Button>Go</Button>
+    <Box p={4} bg="highlight">
+      <Flex
+        sx={{
+          alignItems: "center",
+        }}
+      >
+        <Heading>Components</Heading>
+        <Button ml="auto">Beep</Button>
+        <Toggle />
+      </Flex>
     </Box>
   );
 }
