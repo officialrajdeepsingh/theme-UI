@@ -10,7 +10,7 @@ export function Toggle() {
           setColorMode(colorMode === "default" ? "dark" : "default");
         }}
       >
-        Toggle {colorMode === "default" ? "Dark" : "Light"}
+        {colorMode === "default" ? "Dark" : "Light"}
       </button>
     </header>
   );
