@@ -1,12 +1,10 @@
 import { makeTheme } from '@theme-ui/css/utils'
 
 export const theme = makeTheme({
-
   config: {
     initialColorModeName: 'light',
     useColorSchemeMediaQuery: true,
   },
-
   colors: {
     text: '#000',
     background: '#fff',
@@ -45,10 +43,18 @@ export const theme = makeTheme({
       },
     },
   },
-
-  buttons: {
-    primary: {
-      cursor: 'pointer',
+  text: {
+    default: {
+      color: 'text',
+      fontSize: 3,
     },
-  },
+    caps: {
+      textTransform: 'uppercase'
+    },
+    heading: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+    },
+  }
 })
