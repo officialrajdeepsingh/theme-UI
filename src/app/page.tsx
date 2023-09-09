@@ -1,30 +1,35 @@
 "use client";
-import { Box, Button, Flex, Heading, Container, Alert, Close } from "theme-ui";
-import { Toggle } from "@/components/Toggle";
+
+import { AspectImage, Box, Card, Container, Text } from "theme-ui";
 export default function Home() {
   return (
     <>
       <Container p={4} bg="muted">
-        <Box p={4} bg="highlight">
-          <Flex
-            sx={{
-              alignItems: "center",
-            }}
-          >
-            <Heading>Components</Heading>
-            <Button ml="auto">Beep</Button>
-            <Toggle />
-          </Flex>
-        </Box>
+        <Card
+          sx={{
+            maxWidth: 460
+          }}
+        >
+          <AspectImage
+            ratio={4 / 3}
+            src={"https://cdn.pixabay.com/photo/2023/04/15/14/42/baby-7927864_1280.jpg"}
+          />
+          <Box p={"10px"}>
+            <Text as={"h1"} mb={"8px"} variant="caps">
+              Lorem ipsum dolor sit amet cillum sint consectetur cupidatat.
+            </Text>
+            <Text as={"p"}
+              sx={{
+                fontSize: 2,
+                display: "block",
+              }}
+            >
+              Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
+              culpa et culpa duis.
+            </Text>
+          </Box>
+        </Card>
       </Container>
-      
-      <Container mt={"10px"} p={"10px"} >
-        <Alert>
-          Beep boop, this is an alert!
-          <Close ml="auto" mr={-2} />
-        </Alert>
-      </Container>
-
     </>
   );
 }
